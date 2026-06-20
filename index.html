@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monarch Mx - Sneakers y artículos de lujo de importación premium. El porte que buscas. Alta gama directa a tus manos.">
+    <meta name="keywords" content="sneakers lujo, importación premium, nike, jordan, new balance, adidas, accesorios premium">
+    <meta name="theme-color" content="#1C1C1C">
+    <meta name="robots" content="index, follow">
+    <meta name="canonical" href="https://monarch-mx.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Monarch Mx - Sneakers y Lujo Premium">
+    <meta property="og:description" content="El porte que buscas. Alta gama directa a tus manos. Importación premium sin intermediarios.">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Monarch Mx - Sneakers Premium">
+    <meta name="twitter:description" content="El porte que buscas. Alta gama directa a tus manos.">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Monarch Mx",
+        "url": "https://monarch-mx.com",
+        "description": "Tienda premium de sneakers y accesorios de lujo importados",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Sales",
+            "telephone": "+52-555-987-6543"
+        }
+    }
+    </script>
+    
+    <title>Monarch Mx - Sneakers y Accesorios de Lujo Premium | Importación Directa</title>
+    <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <span class="brand-name">MONARCH MX</span>
+            </div>
+            <div class="navbar-menu">
+                <button class="nav-link" onclick="scrollToSection('hero')">Inicio</button>
+                <button class="nav-link" onclick="scrollToSection('catalog')">Catálogo</button>
+                <button class="nav-link" onclick="scrollToSection('benefits')">Beneficios</button>
+                <button class="nav-link" onclick="scrollToSection('how-to-buy')">Cómo Comprar</button>
+                <button class="nav-link" onclick="scrollToSection('faq')">FAQ</button>
+            </div>
+            <div class="navbar-actions">
+                <button class="whatsapp-btn" onclick="openWhatsApp()">
+                    <span>💬 WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Monarch Mx</h1>
+            <p class="hero-subtitle">El porte que buscas</p>
+            <p class="hero-description">Alta gama directa a tus manos</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('catalog')">Ver Catálogo</button>
+                <button class="btn btn-secondary" onclick="openWhatsApp()">Pedir por WhatsApp</button>
+            </div>
+            <div class="hero-gradient"></div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 class="section-title">Por Qué Monarch Mx</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📦</div>
+                    <h3>Calidad Premium</h3>
+                    <p>Importación de alta gama con proceso de control de calidad riguroso</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎥</div>
+                    <h3>Video Antes del Envío</h3>
+                    <p>Recibes video de tu producto para verificar condición antes de enviarlo</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Envío Gratis</h3>
+                    <p>Envío incluido a cualquier parte de México sin costo adicional</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👤</div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Asesoría directa para elegir exactamente lo que buscas</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Trato Directo</h3>
+                    <p>Comunicación directa sin intermediarios ni burocracia</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Sin Intermediarios</h3>
+                    <p>Precios justos directamente del importador al cliente final</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalog" class="catalog">
+        <div class="container">
+            <h2 class="section-title">Nuestro Catálogo</h2>
+            
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Buscar productos..."
+                    onkeyup="filterProducts()"
+                >
+                <select id="categorySelect" class="filter-select" onchange="filterProducts()">
+                    <option value="">Todas las categorías</option>
+                    <option value="Sneakers">Sneakers</option>
+                    <option value="Gorras">Gorras</option>
+                    <option value="Bolsas">Bolsas</option>
+                    <option value="Sudaderas">Sudaderas</option>
+                    <option value="Accesorios">Accesorios</option>
+                </select>
+                <select id="priceSort" class="filter-select" onchange="filterProducts()">
+                    <option value="">Ordenar por precio</option>
+                    <option value="low">Menor a mayor</option>
+                    <option value="high">Mayor a menor</option>
+                </select>
+            </div>
+
+            <!-- Featured Products -->
+            <div id="featuredContainer" class="featured-products"></div>
+
+            <!-- All Products Grid -->
+            <div id="productsContainer" class="products-grid"></div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p>No encontramos productos que coincidan con tu búsqueda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy Section -->
+    <section id="how-to-buy" class="how-to-buy">
+        <div class="container">
+            <h2 class="section-title">Cómo Comprar</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Elegir Modelo</h3>
+                    <p>Explora nuestro catálogo y encuentra exactamente lo que te gusta</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Solicitar Video</h3>
+                    <p>Contacta por WhatsApp y solicita el video de tu producto</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Anticipo 50%</h3>
+                    <p>Realiza el pago del 50% para separar tu producto</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Envío Gratis</h3>
+                    <p>Recibe tu producto con envío incluido a tu domicilio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"La calidad está a otro nivel. No esperaba que fuera así de premium."</p>
+                    <span class="author">Cliente Monarch Mx</span>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Trato excelente, muy atenta la persona. Recomendado 100%."</p>
+                    <span class="author">Cliente Monarch Mx</span>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"No los distinguen del original. La precisión en los detalles es increíble."</p>
+                    <span class="author">Cliente Monarch Mx</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 onclick="toggleFAQ(this)" class="faq-question">
+                        ¿Cómo hago mi pedido?
+                        <span class="faq-toggle">+</span>
+                    </h3>
+                    <p class="faq-answer" style="display: none;">
+                        Es muy simple. Explora nuestro catálogo, elige el producto que te interesa, contacta por WhatsApp y nosotros te guiamos en todo el proceso. No hay complicaciones, solo servicio directo.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 onclick="toggleFAQ(this)" class="faq-question">
+                        ¿Es calidad premium?
+                        <span class="faq-toggle">+</span>
+                    </h3>
+                    <p class="faq-answer" style="display: none;">
+                        Absolutamente. Todos nuestros productos son importados con control de calidad riguroso. Antes de que lleguen a ti, verificamos cada detalle. Te enviamos video para que confirmes la condición del artículo.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 onclick="toggleFAQ(this)" class="faq-question">
+                        ¿Cómo funciona el envío?
+                        <span class="faq-toggle">+</span>
+                    </h3>
+                    <p class="faq-answer" style="display: none;">
+                        El envío es completamente gratis. Una vez confirmado tu pedido y pagado el 50%, manejamos la logística a nivel nacional. Recibes tu producto en perfecto estado directamente en tu domicilio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Monarch Mx</h4>
+                    <p>Sneakers y artículos de lujo de importación premium directos a tus manos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#catalog">Catálogo</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>WhatsApp: <a href="https://wa.me/5215559876543" target="_blank">+52 555-987-6543</a></p>
+                    <p>Email: <a href="mailto:hola@monarch-mx.com">hola@monarch-mx.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Monarch Mx. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal para Productos -->
+    <div id="productModal" class="modal" onclick="closeProductModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <img id="modalImage" src="" alt="Producto" class="modal-image">
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalBrand" class="modal-brand"></p>
+                <p id="modalDescription" class="modal-description"></p>
+                <div class="modal-price">
+                    <span id="modalPrice" class="price"></span>
+                </div>
+                <button class="btn btn-primary" onclick="openWhatsAppWithProduct()">
+                    Solicitar Más Información
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button Floating -->
+    <button class="floating-whatsapp" onclick="openWhatsApp()" title="Contactar por WhatsApp">
+        <span>💬</span>
+    </button>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "AF1 Premium",
+      "marca": "Nike",
+      "categoria": "Sneakers",
+      "precio": 1890,
+      "descripcion": "Air Force 1 importado con llavero y placas de metal. Calidad de importación premium.",
+      "imagen": "./assets/images/af1.jpg",
+      "estado": "nuevo",
+      "destacado": true,
+      "stock": 5,
+      "especificaciones": {
+        "material": "Cuero genuino",
+        "origen": "Importación China",
+        "garantia": "Autenticidad verificada",
+        "accesorios": "Llavero y placas de metal incluidas"
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "TN Camaleón",
+      "marca": "Nike",
+      "categoria": "Sneakers",
+      "precio": 1150,
+      "descripcion": "TN de temperatura variable. Negro con calor, cambia a rosa o azul.",
+      "imagen": "./assets/images/tn-camaléon.jpg",
+      "estado": "nuevo",
+      "destacado": true,
+      "stock": 8,
+      "especificaciones": {
+        "material": "Sintético de importación",
+        "origen": "Importación China",
+        "tecnologia": "Tecnología de cambio de color",
+        "talles": "#5 al #8"
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "NB 990 Menta",
+      "marca": "New Balance",
+      "categoria": "Sneakers",
+      "precio": 1290,
+      "descripcion": "New Balance 990 en blanco o menta negro. Calidad importada premium.",
+      "imagen": "./assets/images/nb-990.jpg",
+      "estado": "nuevo",
+      "destacado": false,
+      "stock": 6,
+      "especificaciones": {
+        "material": "Cuero y malla",
+        "origen": "Importación China",
+        "colores": "Blanco, Menta, Negro",
+        "talles": "#3 al #5.5"
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Mid 002",
+      "marca": "Jordan",
+      "categoria": "Sneakers",
+      "precio": 1990,
+      "descripcion": "Mid 002 con calidad de importación premium. Detalles perfectos.",
+      "imagen": "./assets/images/mid-002.jpg",
+      "estado": "nuevo",
+      "destacado": true,
+      "stock": 4,
+      "especificaciones": {
+        "material": "Cuero premium",
+        "origen": "Importación China",
+        "garantia": "Calidad verificada",
+        "talles": "#5 al #8"
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "720 Tortuga",
+      "marca": "Nike",
+      "categoria": "Sneakers",
+      "precio": 1590,
+      "descripcion": "Air Max 720 Tortuga. Calidad de importación. Talla 2.5 a 9.",
+      "imagen": "./assets/images/air-max-720.jpg",
+      "estado": "nuevo",
+      "destacado": false,
+      "stock": 7,
+      "especificaciones": {
+        "material": "Sintético con aire",
+        "origen": "Importación China",
+        "tecnologia": "Air Max 720",
+        "talles": "#2.5 al #9"
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Nocta Negro",
+      "marca": "Nike",
+      "categoria": "Sneakers",
+      "precio": 1490,
+      "descripcion": "Nike x Drake Nocta en negro. Edición limitada premium.",
+      "imagen": "./assets/images/nocta-negro.jpg",
+      "estado": "nuevo",
+      "destacado": true,
+      "stock": 3,
+      "especificaciones": {
+        "material": "Cuero y nylon",
+        "origen": "Importación China",
+        "coleccion": "Drake Nocta",
+        "edicion": "Limitada"
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "NB Negro Rosa",
+      "marca": "New Balance",
+      "categoria": "Sneakers",
+      "precio": 990,
+      "descripcion": "New Balance negro con detalles en rosa. Combinación elegante.",
+      "imagen": "./assets/images/nb-negro-rosa.jpg",
+      "estado": "nuevo",
+      "destacado": false,
+      "stock": 9,
+      "especificaciones": {
+        "material": "Cuero y malla",
+        "origen": "Importación China",
+        "colores": "Negro con detalles rosa",
+        "talles": "#3 al #5"
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "Cross Body Premium",
+      "marca": "Coach",
+      "categoria": "Bolsas",
+      "precio": 1590,
+      "descripcion": "Bolsa cross body Steve & Coach. Cuero premium importado.",
+      "imagen": "./assets/images/cross-body.jpg",
+      "estado": "nuevo",
+      "destacado": true,
+      "stock": 5,
+      "especificaciones": {
+        "material": "Cuero genuino",
+        "origen": "Importación China",
+        "capacidad": "Mediana",
+        "compartimentos": "Múltiples"
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "Sudadera Essentials",
+      "marca": "Fear of God",
+      "categoria": "Sudaderas",
+      "precio": 1290,
+      "descripcion": "Sudadera premium Essentials en algodón de alta calidad.",
+      "imagen": "./assets/images/sudadera.jpg",
+      "estado": "nuevo",
+      "destacado": false,
+      "stock": 8,
+      "especificaciones": {
+        "material": "Algodón 100%",
+        "origen": "Importación China",
+        "ajuste": "Holgado",
+        "talles": "XS a XXL"
+      }
+    },
+    {
+      "id": 10,
+      "nombre": "Gorra Premium",
+      "marca": "Supreme",
+      "categoria": "Gorras",
+      "precio": 590,
+      "descripcion": "Gorra ajustable Supreme. Calidad premium de importación.",
+      "imagen": "./assets/images/gorra.jpg",
+      "estado": "nuevo",
+      "destacado": false,
+      "stock": 12,
+      "especificaciones": {
+        "material": "Algodón con bordado",
+        "origen": "Importación China",
+        "ajuste": "Ajustable",
+        "marca": "Supreme autenticado"
+      }
+    },
+    {
+      "id": 11,
+      "nombre": "Cinturón Piel",
+      "marca": "Gucci",
+      "categoria": "Accesorios",
+      "precio": 890,
+      "descripcion": "Cinturón de piel genuina con hebilla premium. Importado.",
+      "imagen": "./assets/images/cinturon.jpg",
+      "estado": "nuevo",
+      "destacado": false,
+      "stock": 6,
+      "especificaciones": {
+        "material": "Piel genuina",
+        "origen": "Importación China",
+        "hebilla": "Metal dorado",
+        "talles": "Ajustable"
+      }
+    },
+    {
+      "id": 12,
+      "nombre": "Cartera Plegable",
+      "marca": "Louis Vuitton Style",
+      "categoria": "Accesorios",
+      "precio": 690,
+      "descripcion": "Cartera plegable en cuero. Diseño elegante y minimalista.",
+      "imagen": "./assets/images/cartera.jpg",
+      "estado": "nuevo",
+      "destacado": true,
+      "stock": 10,
+      "especificaciones": {
+        "material": "Cuero sintético premium",
+        "origen": "Importación China",
+        "capacidad": "Monedas y tarjetas",
+        "cierre": "Magnético"
+      }
+    }
+  ],
+  "categorias": [
+    "Sneakers",
+    "Bolsas",
+    "Sudaderas",
+    "Gorras",
+    "Accesorios"
+  ],
+  "marcas": [
+    "Nike",
+    "Jordan",
+    "New Balance",
+    "Adidas",
+    "Coach",
+    "Supreme",
+    "Gucci",
+    "Louis Vuitton",
+    "Fear of God"
+  ]
+}

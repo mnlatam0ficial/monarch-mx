@@ -1,0 +1,26 @@
+# Jekyll Configuration for GitHub Pages
+theme: jekyll-theme-minimal
+title: Monarch Mx
+description: Sneakers y Artículos de Lujo Premium
+author:
+  name: Monarch Mx
+  email: hola@monarch-mx.com
+
+# URL Configuration
+url: https://monarch-mx.com
+baseurl: /
+
+# Markdown Processor
+markdown: kramdown
+
+# Exclude from Jekyll processing
+exclude:
+  - node_modules/
+  - script.js
+  - style.css
+  - productos.json
+  - README.md
+
+# Include files
+include:
+  - .nojekyll
