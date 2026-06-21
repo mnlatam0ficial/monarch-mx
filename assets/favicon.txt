@@ -1,0 +1,3 @@
+Este archivo placeholder representa el favicon.
+En producción, coloca un archivo PNG de 32x32 o superior con tu logo.
+Puedes usar: favicon-generator.org o similar.
