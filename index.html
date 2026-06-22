@@ -30,7 +30,7 @@
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Sales",
-            "telephone": "+52-555-987-6543"
+            "telephone": "+52-222-536-4045"
         }
     }
     </script>
@@ -263,7 +263,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contacto</h4>
-                    <p>WhatsApp: <a href="https://wa.me/5215559876543" target="_blank">+52 555-987-6543</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/5212225364045" target="_blank">+52 222 536 4045</a></p>
                     <p>Email: <a href="mailto:hola@monarch-mx.com">hola@monarch-mx.com</a></p>
                 </div>
             </div>
@@ -273,19 +273,28 @@
         </div>
     </footer>
 
-    <!-- Lightbox Modal para Productos -->
+    <!-- Lightbox Modal para Productos con Carrusel -->
     <div id="productModal" class="modal" onclick="closeProductModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
             <span class="close" onclick="closeProductModal()">&times;</span>
-            <img id="modalImage" src="" alt="Producto" class="modal-image">
+            
+            <!-- Contenedor del carrusel -->
+            <div class="carousel-wrapper">
+                <div id="modalCarousel" class="carousel-container">
+                    <!-- Las imágenes se inyectan dinámicamente -->
+                </div>
+                <!-- Botones de navegación -->
+                <button class="carousel-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
+                <button class="carousel-btn next" onclick="scrollCarousel(1)">&#10095;</button>
+            </div>
+            
             <div class="modal-info">
                 <h2 id="modalTitle"></h2>
                 <p id="modalBrand" class="modal-brand"></p>
-                <p id="modalDescription" class="modal-description"></p>
                 <div class="modal-price">
                     <span id="modalPrice" class="price"></span>
                 </div>
-                <button class="btn btn-primary" onclick="openWhatsAppWithProduct()">
+                <button class="btn btn-primary" onclick="openWhatsAppWithProduct(currentProduct?.id)">
                     Solicitar Más Información
                 </button>
             </div>
