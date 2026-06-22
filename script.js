@@ -3,10 +3,10 @@
 // ==========================================
 
 // Configuration
-const WHATSAPP_NUMBER = '5215559876543';
+const WHATSAPP_NUMBER = '5212225364045';
 const WHATSAPP_MESSAGE = 'Qué rollo, vengo de la página de Monarch. Me interesa un modelo premium, ¿me pasas info para asegurar el anticipo y armar el pedido?';
 
-// Product Database
+// Product Database (campos eliminados: descripcion, estado, stock)
 const products = [
     {
         id: 1,
@@ -14,11 +14,12 @@ const products = [
         marca: 'Nike',
         categoria: 'Sneakers',
         precio: 1890,
-        descripcion: 'Air Force 1 importado con llavero y placas de metal. Calidad de importación premium.',
-        imagen: 'https://via.placeholder.com/400x400?text=AF1+Premium',
-        estado: 'nuevo',
-        destacado: true,
-        stock: 5
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=AF1+Premium+1',
+            'https://via.placeholder.com/400x400?text=AF1+Premium+2',
+            'https://via.placeholder.com/400x400?text=AF1+Premium+3'
+        ],
+        destacado: true
     },
     {
         id: 2,
@@ -26,11 +27,11 @@ const products = [
         marca: 'Nike',
         categoria: 'Sneakers',
         precio: 1150,
-        descripcion: 'TN de temperatura variable. Negro con calor, cambia a rosa o azul.',
-        imagen: 'https://via.placeholder.com/400x400?text=TN+Camaléon',
-        estado: 'nuevo',
-        destacado: true,
-        stock: 8
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=TN+Camaleon+1',
+            'https://via.placeholder.com/400x400?text=TN+Camaleon+2'
+        ],
+        destacado: true
     },
     {
         id: 3,
@@ -38,11 +39,10 @@ const products = [
         marca: 'New Balance',
         categoria: 'Sneakers',
         precio: 1290,
-        descripcion: 'New Balance 990 en blanco o menta negro. Calidad importada premium.',
-        imagen: 'https://via.placeholder.com/400x400?text=NB+990+Menta',
-        estado: 'nuevo',
-        destacado: false,
-        stock: 6
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=NB+990+Menta+1'
+        ],
+        destacado: false
     },
     {
         id: 4,
@@ -50,11 +50,12 @@ const products = [
         marca: 'Jordan',
         categoria: 'Sneakers',
         precio: 1990,
-        descripcion: 'Mid 002 con calidad de importación premium. Detalles perfectos.',
-        imagen: 'https://via.placeholder.com/400x400?text=Mid+002',
-        estado: 'nuevo',
-        destacado: true,
-        stock: 4
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=Mid+002+1',
+            'https://via.placeholder.com/400x400?text=Mid+002+2',
+            'https://via.placeholder.com/400x400?text=Mid+002+3'
+        ],
+        destacado: true
     },
     {
         id: 5,
@@ -62,11 +63,10 @@ const products = [
         marca: 'Nike',
         categoria: 'Sneakers',
         precio: 1590,
-        descripcion: 'Air Max 720 Tortuga. Calidad de importación. Talla 2.5 a 9.',
-        imagen: 'https://via.placeholder.com/400x400?text=Air+Max+720',
-        estado: 'nuevo',
-        destacado: false,
-        stock: 7
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=Air+Max+720+1'
+        ],
+        destacado: false
     },
     {
         id: 6,
@@ -74,11 +74,11 @@ const products = [
         marca: 'Nike',
         categoria: 'Sneakers',
         precio: 1490,
-        descripcion: 'Nike x Drake Nocta en negro. Edición limitada premium.',
-        imagen: 'https://via.placeholder.com/400x400?text=Nocta+Negro',
-        estado: 'nuevo',
-        destacado: true,
-        stock: 3
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=Nocta+Negro+1',
+            'https://via.placeholder.com/400x400?text=Nocta+Negro+2'
+        ],
+        destacado: true
     },
     {
         id: 7,
@@ -86,11 +86,10 @@ const products = [
         marca: 'New Balance',
         categoria: 'Sneakers',
         precio: 990,
-        descripcion: 'New Balance negro con detalles en rosa. Combinación elegante.',
-        imagen: 'https://via.placeholder.com/400x400?text=NB+Negro+Rosa',
-        estado: 'nuevo',
-        destacado: false,
-        stock: 9
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=NB+Negro+Rosa+1'
+        ],
+        destacado: false
     },
     {
         id: 8,
@@ -98,11 +97,11 @@ const products = [
         marca: 'Coach',
         categoria: 'Bolsas',
         precio: 1590,
-        descripcion: 'Bolsa cross body Steve & Coach. Cuero premium importado.',
-        imagen: 'https://via.placeholder.com/400x400?text=Cross+Body',
-        estado: 'nuevo',
-        destacado: true,
-        stock: 5
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=Cross+Body+1',
+            'https://via.placeholder.com/400x400?text=Cross+Body+2'
+        ],
+        destacado: true
     },
     {
         id: 9,
@@ -110,11 +109,10 @@ const products = [
         marca: 'Fear of God',
         categoria: 'Sudaderas',
         precio: 1290,
-        descripcion: 'Sudadera premium Essentials en algodón de alta calidad.',
-        imagen: 'https://via.placeholder.com/400x400?text=Sudadera',
-        estado: 'nuevo',
-        destacado: false,
-        stock: 8
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=Sudadera+1'
+        ],
+        destacado: false
     },
     {
         id: 10,
@@ -122,11 +120,11 @@ const products = [
         marca: 'Supreme',
         categoria: 'Gorras',
         precio: 590,
-        descripcion: 'Gorra ajustable Supreme. Calidad premium de importación.',
-        imagen: 'https://via.placeholder.com/400x400?text=Gorra+Premium',
-        estado: 'nuevo',
-        destacado: false,
-        stock: 12
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=Gorra+Premium+1',
+            'https://via.placeholder.com/400x400?text=Gorra+Premium+2'
+        ],
+        destacado: false
     },
     {
         id: 11,
@@ -134,11 +132,10 @@ const products = [
         marca: 'Gucci',
         categoria: 'Accesorios',
         precio: 890,
-        descripcion: 'Cinturón de piel genuina con hebilla premium. Importado.',
-        imagen: 'https://via.placeholder.com/400x400?text=Cinturon',
-        estado: 'nuevo',
-        destacado: false,
-        stock: 6
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=Cinturon+1'
+        ],
+        destacado: false
     },
     {
         id: 12,
@@ -146,11 +143,11 @@ const products = [
         marca: 'Louis Vuitton Style',
         categoria: 'Accesorios',
         precio: 690,
-        descripcion: 'Cartera plegable en cuero. Diseño elegante y minimalista.',
-        imagen: 'https://via.placeholder.com/400x400?text=Cartera',
-        estado: 'nuevo',
-        destacado: true,
-        stock: 10
+        imagenes: [
+            'https://via.placeholder.com/400x400?text=Cartera+1',
+            'https://via.placeholder.com/400x400?text=Cartera+2'
+        ],
+        destacado: true
     }
 ];
 
@@ -183,13 +180,12 @@ function renderProducts() {
     container.innerHTML = filteredProducts.map(product => `
         <div class="product-card" onclick="openProductModal(${product.id})">
             <div class="product-image-container">
-                <img src="${product.imagen}" alt="${product.nombre}" class="product-image">
+                <img src="${product.imagenes[0]}" alt="${product.nombre}" class="product-image">
                 ${product.destacado ? '<span class="product-badge featured">Destacado</span>' : ''}
             </div>
             <div class="product-info">
                 <div class="product-brand">${product.marca}</div>
                 <h3 class="product-name">${product.nombre}</h3>
-                <p class="product-description">${product.descripcion}</p>
                 <div class="product-price">
                     <span class="price">$${formatPrice(product.precio)}</span>
                 </div>
@@ -217,13 +213,12 @@ function renderFeatured() {
         ${featured.map(product => `
             <div class="product-card" onclick="openProductModal(${product.id})">
                 <div class="product-image-container">
-                    <img src="${product.imagen}" alt="${product.nombre}" class="product-image">
+                    <img src="${product.imagenes[0]}" alt="${product.nombre}" class="product-image">
                     <span class="product-badge featured">Destacado</span>
                 </div>
                 <div class="product-info">
                     <div class="product-brand">${product.marca}</div>
                     <h3 class="product-name">${product.nombre}</h3>
-                    <p class="product-description">${product.descripcion}</p>
                     <div class="product-price">
                         <span class="price">$${formatPrice(product.precio)}</span>
                     </div>
@@ -247,8 +242,7 @@ function filterProducts() {
     
     filteredProducts = products.filter(product => {
         const matchesSearch = product.nombre.toLowerCase().includes(searchTerm) ||
-                            product.marca.toLowerCase().includes(searchTerm) ||
-                            product.descripcion.toLowerCase().includes(searchTerm);
+                            product.marca.toLowerCase().includes(searchTerm);
         const matchesCategory = !category || product.categoria === category;
         
         return matchesSearch && matchesCategory;
@@ -265,7 +259,7 @@ function filterProducts() {
 }
 
 // ==========================================
-// MODAL FUNCTIONALITY
+// MODAL FUNCTIONALITY (con carrusel)
 // ==========================================
 
 function openProductModal(productId) {
@@ -274,12 +268,36 @@ function openProductModal(productId) {
     
     currentProduct = product;
     
-    document.getElementById('modalImage').src = product.imagen;
+    // Actualizar información del producto
     document.getElementById('modalTitle').textContent = product.nombre;
     document.getElementById('modalBrand').textContent = product.marca;
-    document.getElementById('modalDescription').textContent = product.descripcion;
     document.getElementById('modalPrice').textContent = `$${formatPrice(product.precio)} MXN`;
     
+    // Construir carrusel de imágenes
+    const carouselContainer = document.getElementById('modalCarousel');
+    carouselContainer.innerHTML = '';
+    
+    if (product.imagenes && product.imagenes.length > 0) {
+        product.imagenes.forEach((imgSrc, index) => {
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.alt = `${product.nombre} - imagen ${index + 1}`;
+            img.className = 'carousel-image';
+            carouselContainer.appendChild(img);
+        });
+    } else {
+        // Fallback si no hay imágenes
+        const img = document.createElement('img');
+        img.src = 'https://via.placeholder.com/400x400?text=Sin+imagen';
+        img.alt = 'Sin imagen';
+        img.className = 'carousel-image';
+        carouselContainer.appendChild(img);
+    }
+    
+    // Resetear scroll del carrusel al inicio
+    carouselContainer.scrollLeft = 0;
+    
+    // Mostrar modal
     const modal = document.getElementById('productModal');
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -291,6 +309,13 @@ function closeProductModal(event) {
     const modal = document.getElementById('productModal');
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
+}
+
+// Navegación del carrusel (botones)
+function scrollCarousel(direction) {
+    const container = document.getElementById('modalCarousel');
+    const scrollAmount = container.clientWidth * 0.8;
+    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
 }
 
 // ==========================================
@@ -386,7 +411,7 @@ function setupEventListeners() {
 }
 
 // ==========================================
-// LAZY LOADING IMAGES
+// LAZY LOADING IMAGES (opcional)
 // ==========================================
 
 if ('IntersectionObserver' in window) {
@@ -405,11 +430,10 @@ if ('IntersectionObserver' in window) {
 }
 
 // ==========================================
-// ANALYTICS & TRACKING
+// ANALYTICS & TRACKING (opcional)
 // ==========================================
 
 function trackEvent(category, action, label) {
-    // Google Analytics integration (if needed)
     if (typeof gtag !== 'undefined') {
         gtag('event', action, {
             'event_category': category,
@@ -418,7 +442,6 @@ function trackEvent(category, action, label) {
     }
 }
 
-// Track product views
 document.addEventListener('click', function(e) {
     if (e.target.closest('.product-card')) {
         trackEvent('products', 'view_product', currentProduct?.nombre || 'unknown');
